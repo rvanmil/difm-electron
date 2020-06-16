@@ -1,6 +1,6 @@
 {
   "name": "difm-electron",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "DI.FM Electron App",
   "repository": "https://github.com/rvanmil/difm-electron",
   "author": "René van Mil <rvanmil@me.com>",
