@@ -10,6 +10,7 @@
 
 # production
 electron-builder.env
+/cert
 /dist
 
 # misc
