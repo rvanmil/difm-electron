@@ -7,8 +7,8 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "dist": "electron-builder --publish onTag",
-    "pack": "electron-builder --dir",
+    "dist": "electron-builder -lmw --publish always",
+    "pack": "electron-builder -lmw --dir",
     "postinstall": "electron-builder install-app-deps",
     "start": "electron . --inspect"
   },
@@ -50,7 +50,7 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "René van Mil",
+      "owner": "rvanmil",
       "releaseType": "draft"
     }
   },
