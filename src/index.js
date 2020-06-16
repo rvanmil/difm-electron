@@ -1,20 +1,5 @@
 const { app, BrowserView, BrowserWindow } = require('electron')
-const { autoUpdater } = require('electron-updater')
-const log = require('electron-log')
 
-// Init logger
-log.transports.file.appName = 'difm-electron'
-
-// Catch all errors and log
-process.on('uncaughtException', (error) => {
-	console.error(error)
-})
-
-// Init autoupdater
-autoUpdater.logger = log
-autoUpdater.logger.transports.file.level = 'info'
-
-// Function which starts the app
 const start = () => {
 	const defaultWidth = 1024
 	const defaultHeight = 576
@@ -75,19 +60,4 @@ const start = () => {
 app.on('ready', () => {
 	// Start the app
 	start()
-})
-app.on('ready', () => {
-	// Check for updates when the app is launching
-	autoUpdater.checkForUpdatesAndNotify()
-})
-
-// Autoupdater events
-autoUpdater.on('update-downloaded', () => {
-	// Update downloaded, quit the app, update and restart
-	autoUpdater.quitAndInstall()
-})
-autoUpdater.on('error', (err) => {
-	// Log update problems as warnings
-	log.warn('autoUpdater error')
-	log.warn(JSON.stringify(err))
 })

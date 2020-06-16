@@ -10,10 +10,7 @@
     "build": "electron-builder",
     "start": "electron . --inspect"
   },
-  "dependencies": {
-    "electron-log": "^4.2.2",
-    "electron-updater": "^4.3.1"
-  },
+  "dependencies": {},
   "build": {
     "appId": "org.vanmil.difm",
     "productName": "DI.FM",
