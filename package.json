@@ -10,6 +10,7 @@
     "dist": "electron-builder",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
+    "publish": "electron-builder --publish onTag",
     "start": "electron . --inspect"
   },
   "dependencies": {
