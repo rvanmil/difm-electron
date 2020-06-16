@@ -7,9 +7,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "dist": "electron-builder -lmw --publish always",
-    "pack": "electron-builder -lmw --dir",
-    "postinstall": "electron-builder install-app-deps",
+    "build": "electron-builder",
     "start": "electron . --inspect"
   },
   "dependencies": {
@@ -23,6 +21,7 @@
     "files": [
       "src/"
     ],
+    "afterSign": "./scripts/afterSign.js",
     "mac": {
       "icon": "assets/icon.icns",
       "category": "public.app-category.music"
@@ -47,15 +46,11 @@
     "linux": {
       "category": "Audio",
       "target": "AppImage"
-    },
-    "publish": {
-      "provider": "github",
-      "owner": "rvanmil",
-      "releaseType": "draft"
     }
   },
   "devDependencies": {
     "electron": "^9.0.4",
-    "electron-builder": "^22.7.0"
+    "electron-builder": "^22.7.0",
+    "electron-notarize": "^1.0.0"
   }
 }
