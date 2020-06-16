@@ -1,16 +1,15 @@
 {
   "name": "difm-electron",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "DI.FM Electron App",
   "repository": "https://github.com/rvanmil/difm-electron",
   "author": "René van Mil <rvanmil@me.com>",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "dist": "electron-builder",
+    "dist": "electron-builder --publish onTag",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
-    "publish": "electron-builder --publish onTag",
     "start": "electron . --inspect"
   },
   "dependencies": {
