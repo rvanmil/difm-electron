@@ -13,6 +13,7 @@ Copy the certificate p12 file `myapplecertificate.p12` into the root folder of t
 ```
 APPLEID=your-appleid@icloud.com
 APPLEIDPASS=your-appleid-password
+APPLETEAM=your-apple-team-short-name
 CSC_KEY_PASSWORD=myapplecertificate-p12-password
 CSC_LINK=myapplecertificate.p12
 CSC_NAME="Apple Developer Certificate Name (ACBD1234)"

@@ -8,7 +8,8 @@ const notarizeApp = async (electronPlatformName, appOutDir, appBundleId, appName
 			appBundleId,
 			appPath: `${appOutDir}/${appName}.app`,
 			appleId: process.env.APPLEID,
-			appleIdPassword: process.env.APPLEIDPASS
+			appleIdPassword: process.env.APPLEIDPASS,
+			ascProvider: process.env.APPLETEAM
 		})
 	}
 }
